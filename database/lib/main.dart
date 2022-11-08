@@ -1,4 +1,4 @@
-import 'package:database/model/demo.dart';
+import 'package:database/widgets/demo.dart';
 import 'package:flutter/material.dart';
 
 void main() {
