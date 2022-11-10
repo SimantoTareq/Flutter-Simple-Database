@@ -1,5 +1,6 @@
 import 'package:database/db_helper/mydb_helper.dart';
 import 'package:database/model/contact.dart';
+import 'package:database/widgets/demo.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +56,12 @@ class _NewContactState extends State<NewContact> {
                           name: _nameController.text,
                           phone: _phoneController.text));
 
-                      Navigator.of(context).pop();
+                      setState(() {
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(builder: (context) => Demo()),
+                            (route) => false);
+                      });
                     },
                     child: Text('Save Contact'))
               ],
